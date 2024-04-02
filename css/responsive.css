@@ -1,0 +1,73 @@
+@media screen and (max-width: 1200px) {
+  header {
+    transform: translateX(-75%);
+  }
+
+  header nav .nav-logo {
+    font-size: 1.5rem;
+  }
+
+  header nav .nav-burger {
+    top: 20px;
+  }
+
+  header nav .nav-list ul li a {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    transform: translateX(-80%);
+    width: 30%;
+    background-color: transparent;
+  }
+
+  .container {
+    padding: 2rem 4rem;
+  }
+
+  header nav .nav-logo {
+    padding: 2.5rem 0 0;
+    font-size: 1.2rem;
+  }
+
+  header nav .nav-burger {
+    top: 18px;
+    right: 10px;
+  }
+
+  header nav .nav-list ul li a {
+    font-size: 1rem;
+  }
+
+  .container .cards .card {
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .container .cards .card .card-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    transform: translateX(-75%);
+  }
+
+  .container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    transform: translateX(-75%);
+    width: 40%;
+  }
+
+  header nav .nav-burger {
+    right: 5px;
+  }
+}
