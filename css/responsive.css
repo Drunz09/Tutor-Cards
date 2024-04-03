@@ -49,6 +49,40 @@
   .container .cards .card .card-list {
     flex-wrap: wrap;
   }
+
+  .container .cards #card-seven .card-head {
+    margin-top: 0;
+  }
+
+  .container .cards #card-seven .card-list .list-content {
+    height: fit-content;
+    width: 225px;
+  }
+
+  .container .cards #card-seven .card-list .list-content img {
+    transform: translateY(0);
+    box-shadow: 0 0 6px #000;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+  }
+
+  .container .cards #card-seven .card-list .list-content .content-info {
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 0 6px #000;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+  }
+
+  .container .cards #card-seven .card-list .list-content .content-info h3::after {
+    width: 70%;
+  }
+
+  .container .cards #card-seven .card-list .list-content:hover .content-info h3::after {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -122,12 +122,9 @@ header nav .nav-list ul li a:hover {
   color: #000;
 }
 
-.container {
-  padding: 2rem 6rem;
-}
-
 .container .cards .card {
-  height: 100dvh;
+  padding: 0 6rem;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -470,6 +467,7 @@ header nav .nav-list ul li a:hover {
   width: 100%;
   height: 278px;
   object-fit: cover;
+  transition: all 0.4s ease-in;
 }
 
 .container .cards #card-five .card-list .list-content .content-info {
@@ -513,6 +511,10 @@ header nav .nav-list ul li a:hover {
   text-shadow: none;
 }
 
+.container .cards #card-five .card-list .list-content:hover img {
+  transform: scale(105%);
+}
+
 .container .cards #card-five .card-list .list-content:hover .content-info {
   transform: translateY(0);
   background-color: rgba(255, 255, 255, 0.3);
@@ -520,4 +522,355 @@ header nav .nav-list ul li a:hover {
 
 .container .cards #card-five .card-list .list-content:hover .content-info p {
   opacity: 1;
+}
+
+.container .cards #card-six .card-list {
+  flex-wrap: wrap;
+}
+
+.container .cards #card-six .card-list .list-content {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #000;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 1);
+  display: flex;
+}
+
+.container .cards #card-six .card-list .list-content .card-left {
+  flex-basis: 60%;
+  padding: 1.5rem;
+}
+
+.container .cards #card-six .card-list .list-content .card-left h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.container .cards #card-six .card-list .list-content .card-left h3::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  border-radius: 6px;
+  background-color: blue;
+  margin: 0.4rem 0 0.5rem;
+}
+
+.container .cards #card-six .card-list .list-content .card-left > p {
+  font-size: 1rem;
+  color: rgb(128, 128, 128);
+  margin-bottom: 1rem;
+}
+
+.container .cards #card-six .card-list .list-content .card-left a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 65%;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.container .cards #card-six .card-list .list-content .card-left a .price {
+  flex-basis: 30%;
+  padding: 0.3rem;
+  background-color: blue;
+  text-align: center;
+  min-width: 40%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container .cards #card-six .card-list .list-content .card-left .price i {
+  transform: translateX(-400%);
+  transition: all 0.5s ease-in;
+}
+
+.container .cards #card-six .card-list .list-content .card-left .price p {
+  transition: all 0.5s ease-in;
+}
+
+.container .cards #card-six .card-list .list-content .card-left a:hover .price i {
+  transform: translateX(-100%);
+}
+
+.container .cards #card-six .card-list .list-content .card-left a:hover .price p {
+  transform: translateX(-400%);
+}
+
+.container .cards #card-six .card-list .list-content .card-left a > p {
+  flex-basis: 65%;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-six .card-list .list-content .card-left a:hover > p {
+  background-color: #000;
+}
+
+.container .cards #card-six .card-list .list-content .card-right {
+  position: relative;
+  flex-basis: 40%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.container .cards #card-six .card-list .list-content .card-right img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .cards #card-six .card-list .list-content .card-right .right-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-six .card-list .list-content .card-right:hover .right-list {
+  transform: translateX(0);
+}
+
+.container .cards #card-six .card-list .list-content .card-right .right-list h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.container .cards #card-six .card-list .list-content .card-right .right-list ul {
+  list-style: outside;
+}
+
+.container .cards #card-six .card-list .list-content .card-right .right-list ul li {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem;
+  border-bottom: 1px solid #000;
+  font-size: 0.8rem;
+}
+
+.container .cards #card-seven .card-head {
+  margin-top: -8rem;
+}
+
+.container .cards #card-seven .card-list .list-content {
+  position: relative;
+  width: 275px;
+  height: 230px;
+}
+
+.container .cards #card-seven .card-list .list-content img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transform: translateY(50px);
+  box-shadow: 0 0 4px #000;
+  filter: contrast(80%);
+  transition: all 0.4s ease-in;
+}
+
+.container .cards #card-seven .card-list .list-content:hover img {
+  transform: translateY(0);
+  filter: contrast(100%);
+  box-shadow: 0 0 6px #000;
+  z-index: 3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.container .cards #card-seven .card-list .list-content .content-info {
+  opacity: 0;
+  z-index: 0;
+  position: relative;
+  padding: 1rem 1.5rem;
+  transform: translateY(-100px);
+  transition: all 0.4s ease-in;
+}
+
+.container .cards #card-seven .card-list .list-content:hover .content-info {
+  opacity: 1;
+  z-index: 2;
+  box-shadow: 0 0 6px #000;
+  transform: translateY(-3px);
+  background-color: #fff;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.container .cards #card-seven .card-list .list-content .content-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.container .cards #card-seven .card-list .list-content .content-info h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: blue;
+  border-radius: 6px;
+  margin: 0.3rem 0 0.5rem;
+  transition: all 1s ease-in;
+}
+
+.container .cards #card-seven .card-list .list-content:hover .content-info h3::after {
+  width: 60%;
+}
+
+.container .cards #card-seven .card-list .list-content .content-info p {
+  font-size: 1rem;
+  color: rgb(128, 128, 128);
+  margin-bottom: 0.5rem;
+}
+
+.container .cards #card-seven .card-list .list-content .content-info a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-seven .card-list .list-content .content-info a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.container .cards #card-seven .card-list .list-content .content-info a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  margin-top: 0.2rem;
+  transition: all 0.5s ease-in;
+}
+
+.container .cards #card-seven .card-list .list-content .content-info a:hover::after {
+  width: 35%;
+}
+
+.container .cards #card-eight .card-list .list-content {
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 4px #000;
+}
+
+.container .cards #card-eight .card-list .list-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.1rem;
+}
+
+.container .cards #card-eight .card-list .list-content > p {
+  font-size: 1.2rem;
+  color: rgb(128, 128, 128);
+}
+
+.container .cards #card-eight .card-list .list-content form .rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.3rem;
+  margin: 1.5rem 0 1.3rem;
+}
+
+.container .cards #card-eight .card-list .list-content form .rating input {
+  appearance: none;
+}
+
+.container .cards #card-eight .card-list .list-content form .rating label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  overflow: hidden;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.container .cards #card-eight .card-list .list-content form .rating input:checked + label {
+  background-color: blue;
+  color: #fff;
+}
+
+.container .cards #card-eight .card-list .list-content form .comment {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .cards #card-eight .card-list .list-content form .comment label {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.container .cards #card-eight .card-list .list-content form .comment textarea {
+  width: 100%;
+}
+
+.container .cards #card-eight .card-list .list-content form .subscribe {
+  margin: 1rem 0;
+}
+
+.container .cards #card-eight .card-list .list-content form .subscribe p {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.container .cards #card-eight .card-list .list-content form .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.container .cards #card-eight .card-list .list-content form .button .send {
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.4rem 0;
+  border: none;
+  color: #fff;
+  background-color: blue;
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-eight .card-list .list-content form .button .send:hover {
+  background-color: darkblue;
+}
+
+.container .cards #card-eight .card-list .list-content form .button .cancel {
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.4rem 0;
+  border: none;
+  color: #fff;
+  background-color: orange;
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-eight .card-list .list-content form .button .cancel:hover {
+  background-color: orangered;
 }
