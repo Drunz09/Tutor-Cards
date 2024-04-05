@@ -95,6 +95,7 @@ header.active nav i:nth-child(2) {
 header nav .nav-list {
   opacity: 0;
   transition: all 0.3s ease-in;
+  height: 100vh;
 }
 
 header nav .nav-list.active {
@@ -103,6 +104,10 @@ header nav .nav-list.active {
 
 header nav .nav-list ul {
   list-style: none;
+  height: 80%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 header nav .nav-list ul li {
@@ -122,9 +127,21 @@ header nav .nav-list ul li a:hover {
   color: #000;
 }
 
+.container {
+  position: relative;
+}
+
+.container .cards {
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 .container .cards .card {
+  scroll-snap-align: center;
   padding: 0 6rem;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -873,4 +890,182 @@ header nav .nav-list ul li a:hover {
 
 .container .cards #card-eight .card-list .list-content form .button .cancel:hover {
   background-color: orangered;
+}
+
+.container .cards #card-nine .card-list .list-content {
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 0 4px #000;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.container .cards #card-nine .card-list .list-content img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info {
+  padding: 0.5rem 0;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info .info-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info .info-list p {
+  margin: 0.9rem 0.5rem 0.5rem;
+  padding: 0.1rem 0.6rem;
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  font-size: 1.05rem;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #000;
+  text-shadow: 1px 1px #000;
+  background-color: darkgreen;
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info .info-list p:hover {
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: green;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info > p {
+  font-size: 1.08rem;
+  text-align: center;
+  color: rgb(128, 128, 128);
+  margin: 0.5rem 0 1.2rem;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info .info-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info .info-price h4 {
+  font-size: 1.4rem;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info .info-price a {
+  padding: 0.3rem 0.8rem;
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background-color: rgb(36, 36, 255);
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-nine .card-list .list-content .content-info .info-price a:hover {
+  background-color: darkblue;
+}
+
+.container .cards #card-ten .card-list .list-content {
+  position: relative;
+  width: 325px;
+  box-shadow: 0 0 4px #000;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 1s ease-in;
+}
+
+.container .cards #card-ten .card-list .list-content:hover {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 6px #000;
+  cursor: pointer;
+}
+
+.container .cards #card-ten .card-list .list-content .content-front {
+  width: 100%;
+  height: 230px;
+}
+
+.container .cards #card-ten .card-list .list-content .content-front img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: all 0.5s ease-in 0.5s;
+}
+
+.container .cards #card-ten .card-list .list-content:hover .content-front img {
+  filter: blur(10px);
+}
+
+.container .cards #card-ten .card-list .list-content .content-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  padding: 2rem;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  transform: rotateY(180deg);
+  transition: all 0.3s ease-in 0.5s;
+}
+
+.container .cards #card-ten .card-list .list-content:hover .content-back {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container .cards #card-ten .card-list .list-content .content-back h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.container .cards #card-ten .card-list .list-content .content-back h3::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 70%;
+  margin: 0.5rem 0 1rem;
+  border-radius: 4px;
+  background-color: rgb(128, 128, 128);
+}
+
+.container .cards #card-ten .card-list .list-content .content-back p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.container .cards #card-ten .card-list .list-content .content-back a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.container .cards #card-ten .card-list .list-content .content-back a:hover {
+  color: rgb(128, 128, 128);
+}
+
+.container .cards #card-ten .card-list .list-content .content-back a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: rgb(128, 128, 128);
+  transition: all 0.4s ease-out;
+}
+
+.container .cards #card-ten .card-list .list-content .content-back a:hover::after {
+  width: 40%;
 }

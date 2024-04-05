@@ -23,10 +23,6 @@
     background-color: transparent;
   }
 
-  .container {
-    padding: 2rem 4rem;
-  }
-
   header nav .nav-logo {
     padding: 2.5rem 0 0;
     font-size: 1.2rem;
@@ -41,9 +37,18 @@
     font-size: 1rem;
   }
 
+  .container {
+    padding: 0;
+  }
+
+  .container .cards {
+    scroll-snap-type: y proximity;
+    padding: 0 2rem;
+  }
+
   .container .cards .card {
     height: 100%;
-    padding-bottom: 2rem;
+    padding: 0 0 2rem 0;
   }
 
   .container .cards .card .card-list {
@@ -88,10 +93,6 @@
 @media screen and (max-width: 768px) {
   header {
     transform: translateX(-75%);
-  }
-
-  .container {
-    padding: 2rem;
   }
 }
 
